@@ -1,0 +1,105 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/login/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/login/css/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/login/css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="/login/css/style.css">
+    <title>Number Guessing Game</title>
+    <style>
+        .enclosed-container {
+            border: 2px solid #000; /* Black border */
+            padding: 20px; /* Padding inside the container */
+            background-color: black; /* Black background */
+            border-radius: 10px; /* Rounded corners (optional) */
+            margin-top: 80px; /* Add some space on top */
+            color: white; /* Text color white */
+        }
+        .enclosed-container img {
+            width: 100%; /* Make the image responsive */
+            margin-bottom: 20px; /* Add space between image and form */
+        }
+        .form-title, .form-text {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 enclosed-container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="/login/images/ng.webp" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 contents">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12">
+                                    <form action="/" method="post" class="px-4 py-4">
+                                        <div class="mb-4">
+                                            <h3 class="form-title">Number Guessing Game</h3>
+                                            <p class="mb-4 form-text" style="color: white;">Give a guess between 1 and 100</p>
+                                        </div>
+                                        
+                                        <p style="color:green">
+                                            <strong>
+                                                [[${message}]]
+                                                [[${score}]]
+                                            </strong>
+                                        </p>
+                                        
+                                        <p style="color:red">
+                                            <strong>
+                                                [[${error}]]
+                                                [[${attempts}]]
+                                            </strong>
+                                        </p>
+                                        
+                                        
+                                        <div class="form-group first">
+
+											<input type="number" class="form-control" id="number" 
+												name="number" placeholder="Guess a number" 
+												min="1" max="100">
+											
+                                        </div>
+                                        
+                                        <br>
+                                        <input type="submit" value="Submit" class="btn btn-block btn-primary">
+                                        <br>
+                                        <div>
+                                        
+                                        	<p style="color: black;  text-align: center" class="p-2">
+                                                <strong> 
+                                                	<a href="/newGame">Start New Game</a>
+                                                </strong>
+                                            </p>
+                                        	
+                                            <p style="color: black; background-color: lavender; 
+                                            	text-align: center; border-radius:4px" class="p-2">
+                                                <strong> Copyright @PratikLabh </strong>
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
